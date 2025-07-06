@@ -23,22 +23,22 @@
                 <a href="{{ route('products.create') }}" class="btn btn-success mb-3">Add Product</a>
                 <table class="table table-striped table-bordered">
                     <thead>
-                        <tr>
-                            <th>ID</th>
+                        <tr class="text-center">
+                            <th width=60px>ID</th>
                             <th>Name</th>
                             <th>Detail</th>
-                            <th>Action</th>
+                            <th width=200px>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($products as $product)
-                            <tr>
+                            <tr class="text-center">
                                 <td>{{ $product->id }}</td>
                                 <td>{{ $product->name }}</td>
-                                <td>{{ $product->details }}</td>
-                                <td> <button class="btn btn-primary">View</button>
-                                     <button class="btn btn-success">Update</button>
-                                     <button class="btn btn-danger">Delete</button>
+                                <td class="text-start">{{ $product->details }}</td>
+                                <td> <button class="btn btn-primary btn-sm">View</button>
+                                     <button class="btn btn-info btn-sm">Edit</button>
+                                     <button class="btn btn-danger btn-sm">Delete</button>
                                 </td>
                             </tr>
                         @endforeach
