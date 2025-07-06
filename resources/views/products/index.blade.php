@@ -12,7 +12,7 @@
         <div class="card mt-5">
             <div class="card-header"><h4>Product List</h4></div>
             <div class="card-body">
-                <a href="#" class="btn btn-success mb-3">Add Product</a>
+                <a href="{{route('products.create')}}" class="btn btn-success mb-3">Add Product</a>
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
