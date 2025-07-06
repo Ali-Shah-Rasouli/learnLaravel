@@ -24,5 +24,13 @@ class ProductController extends Controller
 
       return redirect()->route('products.index')->with('success', 'product added successfully');
     }
+public function show(Request $request, $id){
+   $product=Product::find($id);
+      return view('products.show', compact('product')); 
+    }
+
+
+
+    
 }
  
