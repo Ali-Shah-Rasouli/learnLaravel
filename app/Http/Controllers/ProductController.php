@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\product;
+use App\Http\Controllers\ProductController;
 
 class ProductController extends Controller
 {
@@ -13,6 +14,15 @@ class ProductController extends Controller
    }
 
    public function create(Request $request){
-      return view('products.create');   }
+      return view('products.create'); 
+    }
+
+   public function store(Request $request){
+      $request->validate(["name" => "required", "details"=> "required"]);
+
+      Product::create(["name"=>$request->name, "details"=>$request->details]);
+
+      return redirect()->route('products.index');
+    }
 }
  
