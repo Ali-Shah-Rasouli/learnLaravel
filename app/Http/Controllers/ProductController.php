@@ -22,7 +22,7 @@ class ProductController extends Controller
 
       Product::create(["name"=>$request->name, "details"=>$request->details]);
 
-      return redirect()->route('products.index');
+      return redirect()->route('products.index')->with('success', 'product added successfully');
     }
 }
  
